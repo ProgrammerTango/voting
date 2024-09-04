@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error</title>
+    <style>
+        /* Apply Poppins font to body and other elements */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1>System Error</h1>
+            <p th:text="${errorMessage}">An error occurred. Kindly click back to continue.</p>
+        </div>
+    </div>
+</body>
+</html>

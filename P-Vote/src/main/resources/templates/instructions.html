@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Instructions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #instructions-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        #instructions-content {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        .vote-button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .vote-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<!-- Modal Overlay -->
+<div id="instructions-modal">
+    <div id="instructions-content">
+        <h2>Instructions</h2>
+        <p>Follow these instructions (Voters)</p>
+        <p class="highlight">1. The online voting platform opens at 8:00 AM 17th September 2024 and closes at 4:00 PM 17th September 2024.</p>
+        <p class="highlight">2. System closes after the countdown.</p>
+        <p class="highlight">3. Assistance will be available through Technical Support Contact Information during voting hours.</p>
+
+        <p>Voting Process:</p>
+        <p class="highlight">1. Select the candidate from the list.</p>
+        <p class="highlight">2. Submit the vote online through the Voting Platform.</p>
+        <p class="highlight">3. Confirmation of vote submission will be provided.</p>
+        <p class="highlight">4. Privacy: All votes are confidential. Voters should not disclose their voting choices.</p>
+
+        <!--  <button class="vote-button" id="close-modal">OK</button> -->
+        <form action="/home" method="get">
+	    	<button type="submit" id="close-modal" class="vote-button">OK</button>
+	    </form>
+    </div>
+</div>
+<!-- Your Main Page Content -->
+<div id="main-content">
+    <!-- Your existing content like header, sidebar, and other sections go here -->
+</div>
+
+<script>
+    // Make sure the script runs after the document has fully loaded
+    /* document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('close-modal').onclick = function() {
+            // Close the modal
+            document.getElementById('instructions-modal').style.display = 'none';
+            // Redirect to the voter page
+            window.location.href = '/voter';
+        };
+    }); */
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Thank You</title>
+
+    <!-- Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <style>
+        .header {
+            width: calc(100% - 250px);
+            margin-left: 250px;
+            transition: width 0.3s, margin-left 0.3s;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .header .logout-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+
+        .content-wrap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 100px);
+            text-align: center;
+        }
+
+        #main-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #main-container img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+    </style>    
+</head>
+
+<body>
+    <div class="header">
+        <div class="container-fluid">
+            <a type="button" id="logoutButton" href="#" class="btn btn-sm btn-danger logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <div class="content-wrap">
+        <div id="main-container">
+            <h1>You have already voted. Thank you for voting.</h1>
+            <img width="100%" height="100%" src="#" th:src="@{/images/voting.jpg}" alt="Thank you image"/>
+            <!--  <img src="voting.jpg" alt="Thank You Image" /> -->
+        </div>
+    </div>
+</body>
+<script>
+	document.getElementById('logoutButton').addEventListener('click', function() {
+	    window.location.href = '/logout'; // Redirect to login page
+	});
+</script>
+
+</html>

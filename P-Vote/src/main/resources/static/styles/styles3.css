@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9eff1;
+}
+
+/* Header Styles */
+.header {
+    background-color: #2388BEFF;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Main Container Styles */
+.container {
+    display: flex;
+    height: calc(100vh - 70px); /* Adjust for header height */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 200px;
+    background-color: #95aec7;
+    padding: 10px;
+    color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.tab-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #004080;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background 0.3s;
+}
+
+.tab-button:hover {
+    background: #003366;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #7a9fc4;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1000; /* Ensure dropdown is above other content */
+}
+
+
+.dropdown-content .tab-button:hover {
+    background: #002244;
+}
+
+/* Content Styles */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+h2 {
+    color: #2388BEFF;
+    margin-top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        height: 40px;
+    }
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+        margin: 0;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f1f1f1; /* Light gray background */
+    color: #333;               /* Dark text color */
+    text-align: center;        /* Center the text */
+    padding: 10px;            /* Add some padding */
+    position: fixed;          /* Fix the footer to the bottom of the page */
+    width: 100%;              /* Make the footer span the full width */
+    bottom: 0;                /* Align it to the bottom */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better separation */
+}
+#timer {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    left: 60%; /* Position it in the middle horizontally */
+    transform: translateX(-50%); /* Offset its position by half of its own width */
+    font-size: 18px;
+    color: #333;
+    background-color: #f3f8f8;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
